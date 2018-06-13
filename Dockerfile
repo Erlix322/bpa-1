@@ -16,12 +16,11 @@ FROM node:6.12.0-alpine
 # Using instead IBM corrected image due to vulnerabilities with standard image
 # see https://developer.ibm.com/answers/questions/361413/why-is-secure-container-toolchain-template-failing.html?smartspace=blockchain
 # FROM registry.ng.bluemix.net/ibmnode
-MAINTAINER Philippe Mulet "philippe_mulet@fr.ibm.com"
+#MAINTAINER Philippe Mulet "philippe_mulet@fr.ibm.com"
 
 # nInstall the application
-ADD package.json /app/package.json
-RUN cd /app && npm install  
-ADD app.js /app/app.js
+ADD . /app/
+RUN cd /app && npm install
 ENV WEB_PORT 80
 EXPOSE  80
 
@@ -35,4 +34,4 @@ EXPOSE  80
 # RUN dpkg --purge --force-all <package>
 
 # Define command to run the application when the container starts
-CMD ["node", "/app/app.js"] 
+CMD ["quasar dev"] 
