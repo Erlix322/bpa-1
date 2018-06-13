@@ -18,7 +18,7 @@ FROM node:6.12.0-alpine
 # FROM registry.ng.bluemix.net/ibmnode
 MAINTAINER Philippe Mulet "philippe_mulet@fr.ibm.com"
 
-# Install the application
+# nInstall the application
 ADD package.json /app/package.json
 RUN cd /app && npm install  
 ADD app.js /app/app.js
