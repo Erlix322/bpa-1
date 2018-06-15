@@ -30,4 +30,4 @@ spec:
     - port: 80
   # label keys and values that must match in order to receive traffic for this service
   selector:
-    app: hello-app
+    app: quasar
