@@ -34,4 +34,4 @@ EXPOSE  80
 # RUN dpkg --purge --force-all <package>
 
 # Define command to run the application when the container starts
-CMD ["node", "/app/server.js"] 
+CMD ["node", "/app/app.js"] 
